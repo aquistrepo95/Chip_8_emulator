@@ -3,7 +3,7 @@ project(chip_8)
 
 set(CMAKE_CXX_STANDARD 20)
 
-add_subdirectory(3rdparty/SDL EXCLUDE_FROM_ALL)
+add_subdirectory(3rdparty/3rdparty/SDL EXCLUDE_FROM_ALL)
 
 add_executable(chip_8 src/main.cpp) 
 
