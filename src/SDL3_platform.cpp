@@ -10,7 +10,7 @@ bool SDL3_platform :: init() {
     }
 
     // create window
-    window = SDL_CreateWindow("CHIP-8 Emulator", CHIP8_WIDTH * SCALE, CHIP8_HEIGHT * SCALE, SDL_WINDOW_RESIZABLE);
+    window = SDL_CreateWindow("CHIP-8 Emulator", CHIP8_WIDTH * SCALE, CHIP8_HEIGHT * SCALE, SDL_WINDOW_HIGH_PIXEL_DENSITY | SDL_WINDOW_RESIZABLE);
     if(!window) {
         std::cerr << "Window Creation Failed: " << SDL_GetError() << std::endl;
         return false;
@@ -22,6 +22,13 @@ bool SDL3_platform :: init() {
         std::cerr << "Renderer Creation Failed: " << SDL_GetError() << std::endl;
         return false;
     }
+    /*
+    SDL_SetRenderLogicalPresentation(
+        renderer, 
+        CHIP8_WIDTH, 
+        CHIP8_HEIGHT, 
+        SDL_LOGICAL_PRESENTATION_INTEGER_SCALE
+    );*/
 
     // create texture
     texture = SDL_CreateTexture(renderer, SDL_PIXELFORMAT_RGBA8888, SDL_TEXTUREACCESS_STREAMING, CHIP8_WIDTH, CHIP8_HEIGHT);
@@ -29,6 +36,8 @@ bool SDL3_platform :: init() {
         std::cerr << "Texture Creation Failed: " << SDL_GetError() << std::endl;
         return false;
     }
+
+    SDL_SetTextureScaleMode(texture, SDL_SCALEMODE_NEAREST);
 
     clear();
     return true;
