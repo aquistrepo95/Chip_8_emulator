@@ -3,7 +3,13 @@ project(chip_8)
 
 set(CMAKE_CXX_STANDARD 20)
 
-add_subdirectory(3rdparty/3rdparty/SDL EXCLUDE_FROM_ALL)
+include(FetchContent)
+FetchContent_Declare(
+    SDL
+    URL https://github.com/libsdl-org/SDL/archive/d629eb3bf093bc71c3d88e1f680b6bbacb33e0a0.zip
+)
+
+FetchContent_MakeAvailable(SDL) 
 
 add_executable(chip_8 src/main.cpp) 
 
