@@ -160,7 +160,7 @@ class chip_8 {
             return table;
         }();
 
-        static inline constexpr Chip8SubTable SubTable8 = []() {
+        static constexpr Chip8SubTable SubTable8 = []() {
             Chip8SubTable table{};
             table.fill(&chip_8::opcode_unknown);
             table[0x0] = &chip_8::opcode_8xy0;
@@ -177,7 +177,7 @@ class chip_8 {
         }();
         
 
-        static inline constexpr Chip8SubTable subtableE = []() {   
+        static constexpr Chip8SubTable subtableE = []() {   
             Chip8SubTable table{};
             table.fill(&chip_8::opcode_unknown);
             table[0x1] = &chip_8::opcode_ExA1;
@@ -187,7 +187,7 @@ class chip_8 {
         }();
         
 
-        static inline constexpr Chip8SubTableF subtableF = []() {
+        static constexpr Chip8SubTableF subtableF = []() {
             Chip8SubTableF table{};
             table.fill(&chip_8::opcode_unknown);
             table[0x07] = &chip_8::opcode_Fx07;
