@@ -14,21 +14,16 @@
   ```
   git clone https://github.com/aquistrepo95/Chip_8_emulator.git
   ```
-* Navigate to 3rdparty/3rdparty and clone the official SDL3 repo.
+* Navigate to the root directory of the project, compile, and build
   ```
-  cd 3rdparty/3rdparty
-  git clone https://github.com/libsdl-org/SDL.git
-  ```
-* Navigate to the root directory of the project, build the project, and navigate to the root directory of the project.
-  ```
-  cd ../../
-  mkdir build && cd build
-  cmake ..
-  cd ../
+  cd chip_8
+  cmake -S . -B build
+  cmake --build build
   ```  
 * Load and run ROMs.
   ```
   ./build/main 3 ROMs/<select the ROM to run>
+  ex: ./build/main 3 ROMs/Tetris\ \[Fran\ Dachille,\ 1991\].ch8
   ```
 
 
