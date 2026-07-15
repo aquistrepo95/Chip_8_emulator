@@ -22,8 +22,8 @@
   ```  
 * Load and run ROMs.
   ```
-  ./build/main 3 ROMs/<select the ROM to run>
-  ex: ./build/main 3 ROMs/Tetris\ \[Fran\ Dachille,\ 1991\].ch8
+  ./build/chip_8 3 ROMs/<select the ROM to run>
+  ex: ./build/chip_8 3 ROMs/Tetris\ \[Fran\ Dachille,\ 1991\].ch8
   ```
 
 
