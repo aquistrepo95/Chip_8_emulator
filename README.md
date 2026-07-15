@@ -2,7 +2,7 @@
 
 <img width="500" height="300" alt="Screenshot 2026-07-11 at 2 11 33 PM" src="https://github.com/user-attachments/assets/8f7b7460-1c40-4ad1-b1de-bfd3785105a5" />
 
-## Chip 8 emulator/interpreter built with C++ 20 and SDL3
+## Chip 8 emulator/interpreter built with C++ and SDL3
 
 ## Built With
 * C++ 
