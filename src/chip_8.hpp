@@ -54,7 +54,7 @@ class chip_8 {
         using FontsetArray = std::array<std::uint8_t, FONTSET_SIZE>;
 
         // fontset
-        static inline constexpr FontsetArray fontset = {
+        static constexpr FontsetArray fontset = {
             0xF0, 0x90, 0x90, 0x90, 0xF0, // 0
 		    0x20, 0x60, 0x20, 0x20, 0x70, // 1
 		    0xF0, 0x10, 0xF0, 0x80, 0xF0, // 2
@@ -128,7 +128,7 @@ class chip_8 {
 
 
         // opcode main table
-        static inline constexpr Chip8MainTable MainTable = []() {
+        static constexpr Chip8MainTable MainTable = []() {
             Chip8MainTable table{};
             table[0x0] = &chip_8::handle_0x0;
             table[0x1] = &chip_8::opcode_1NNN;
@@ -151,7 +151,7 @@ class chip_8 {
         }();
         
         // opcode subtables for 0x0 0x8, 0xE, 0xF
-        static inline constexpr Chip8SubTable SubTable0 = []() {
+        static constexpr Chip8SubTable SubTable0 = []() {
             Chip8SubTable table{};
             table.fill(&chip_8::opcode_unknown);
             table[0x0] = &chip_8::opcode_00E0;
