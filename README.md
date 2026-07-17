@@ -4,10 +4,6 @@
 
 ## Chip 8 emulator/interpreter built with C++ and SDL3
 
-## Background
-I built this project to help understand computer architecture.
-Chip 8 is a good way to start building low-level projects.
-
 ## Built With
 * C++ 
 * SDL3 for graphics processing.
