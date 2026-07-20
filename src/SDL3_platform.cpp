@@ -30,6 +30,10 @@ bool SDL3_platform :: init() {
         SDL_LOGICAL_PRESENTATION_INTEGER_SCALE
     );*/
 
+    if(!SDL_SetRenderVSync(renderer, 1)) {
+        return false;
+    }
+
     // create texture
     texture = SDL_CreateTexture(renderer, SDL_PIXELFORMAT_RGBA8888, SDL_TEXTUREACCESS_STREAMING, CHIP8_WIDTH, CHIP8_HEIGHT);
     if(!texture) {

@@ -146,7 +146,6 @@ class chip_8 {
             table[0xD] = &chip_8::opcode_Dxyn;
             table[0xE] = &chip_8::handle_0xE;
             table[0xF] = &chip_8::handle_0xF;
-    
             return table;
         }();
         

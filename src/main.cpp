@@ -41,7 +41,7 @@ int main(int argc, char** argv) {
         sdl_platform.render(chip8.display);
 
         // delay for a short period to control emulation speed
-        SDL_Delay(delay_cycles);
+        //SDL_Delay(delay_cycles);
 
     }
     
