@@ -204,7 +204,7 @@ class chip_8 {
 
         // add random number generator for instruction Cxkk  
         std::mt19937 random_engine;
-        std::uniform_int_distribution<uint16_t> distribution;
+        std::uniform_int_distribution<std::uint16_t> distribution;
 };
 
 
